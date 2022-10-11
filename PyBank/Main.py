@@ -45,7 +45,7 @@ print(f"Greatest Increase in Profits: {increase_month} (${greatest_increase})")
 print(f"Greats Decrease in Profits: {decrease_month} (${greatest_decrease})")
 
 #output to a txt file
-with open("file.txt", "w") as file.write:
+with open("file.txt", "w") as file:
     file = open("output.txt","w")
     file.write("Financial Analysis\n")
     file.write("-----------------------------\n")

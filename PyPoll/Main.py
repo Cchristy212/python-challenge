@@ -56,18 +56,17 @@ print(f'Winner: {winner}')
 
 # export text file of results
 output = "output.txt"
-with open("output","w") as new:
+with open("output","w") as file:
 
-file.writeprint(
-    "Election Results\n",
-    "------------------\n",
-    f"Total Votes: {total_votes}"
-)
-file.write("--------------------")
-for candidate_name in candidate_votes:
-    file.write(f'{candidate_name}: {candidate_votes[candidate_name]["percent"]}% ({candidate_votes[candidate_name]["votes"]})')
-file.write("--------------------")
+    file.write (
+        f'''Election Results
+------------------
+Total Votes: {total_votes}\n'''
+        )
+    file.write("--------------------\n")
+    for candidate_name in candidate_votes:
+        file.write(f'{candidate_name}: {candidate_votes[candidate_name]["percent"]}% ({candidate_votes[candidate_name]["votes"]})\n')
+    file.write("--------------------\n")
 
-file.write(f'Winner: {winner}')
+    file.write(f'Winner: {winner}')
 
-file.close()
